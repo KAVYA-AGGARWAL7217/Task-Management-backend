@@ -38,6 +38,7 @@ exports.getTask = async (req, res) => {
   res.json(tasks);
 };
 exports.updateTask = async (req, res) => {
+  console.log("hi", req.params.id);
   const id = req.params.id;
   try {
     const doc = await Task.findOneAndUpdate({ _id: id }, req.body, {

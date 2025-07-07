@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const model = require("../model/user");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const User = model.User;
 const fs = require("fs");
 const privateKey = fs.readFileSync("./private.key", "utf-8");
